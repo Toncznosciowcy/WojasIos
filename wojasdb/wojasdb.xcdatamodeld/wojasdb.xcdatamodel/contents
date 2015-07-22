@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Categories" representedClassName="Categories" syncable="YES">
+        <attribute name="catLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageCat" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <relationship name="joinCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubCategories" inverseName="joinSubCategories" inverseEntity="SubCategories" syncable="YES"/>
+    </entity>
+    <entity name="ColorInfo" representedClassName="ColorInfo" syncable="YES">
+        <attribute name="colorName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageCP" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="joinProducts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="joinColorProducts" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Products" representedClassName="Products" syncable="YES">
+        <attribute name="imageProduct" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameProduct" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priceProduct" optional="YES" attributeType="Float" minValueString="-1" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="joinColorProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ColorInfo" inverseName="joinProducts" inverseEntity="ColorInfo" syncable="YES"/>
+        <relationship name="joinProductSC" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubCategories" inverseName="joinP" inverseEntity="SubCategories" syncable="YES"/>
+    </entity>
+    <entity name="SubCategories" representedClassName="SubCategories" syncable="YES">
+        <attribute name="imageSubCategories" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameSubCategories" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="joinP" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="joinProductSC" inverseEntity="Products" syncable="YES"/>
+        <relationship name="joinSubCategories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="joinCategories" inverseEntity="Categories" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Categories" positionX="-7031" positionY="-702" width="128" height="103"/>
+        <element name="Products" positionX="-6489" positionY="-748" width="128" height="118"/>
+        <element name="SubCategories" positionX="-6741" positionY="-700" width="128" height="103"/>
+        <element name="ColorInfo" positionX="-6266" positionY="-711" width="128" height="88"/>
+    </elements>
+</model>
