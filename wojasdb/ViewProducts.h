@@ -10,6 +10,10 @@
 
 @interface ViewProducts : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *galleryView;
+
+
+
+
 @property (weak, nonatomic) IBOutlet UIView *sizeView;
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewProducts;
