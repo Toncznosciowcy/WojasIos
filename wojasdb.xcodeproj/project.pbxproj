@@ -17,7 +17,6 @@
 		90583B141ACD3D710054E1DC /* wojasdbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90583B131ACD3D710054E1DC /* wojasdbTests.m */; };
 		90B41A3F1AE966F500D3FBC1 /* on.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90B41A3E1AE966F500D3FBC1 /* on.jpg */; };
 		90B41A421AE967B900D3FBC1 /* ona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90B41A411AE967B900D3FBC1 /* ona.jpg */; };
-		90B9B2341AE6BE0200003F6D /* IMG_3502.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 90B9B2331AE6BE0200003F6D /* IMG_3502.JPG */; };
 		90BFB9641AEEA82E00FCD7F2 /* SubCategoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB9631AEEA82E00FCD7F2 /* SubCategoriesCell.m */; };
 		90BFB9671AEEA98B00FCD7F2 /* SubMainTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BFB9661AEEA98B00FCD7F2 /* SubMainTable.m */; };
 		90C111221B08CCA400A0D154 /* man_category.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90C111201B08CCA400A0D154 /* man_category.jpg */; };
@@ -85,7 +84,6 @@
 		90583B131ACD3D710054E1DC /* wojasdbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wojasdbTests.m; sourceTree = "<group>"; };
 		90B41A3E1AE966F500D3FBC1 /* on.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = on.jpg; sourceTree = "<group>"; };
 		90B41A411AE967B900D3FBC1 /* ona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ona.jpg; sourceTree = "<group>"; };
-		90B9B2331AE6BE0200003F6D /* IMG_3502.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3502.JPG; sourceTree = "<group>"; };
 		90BFB9621AEEA82E00FCD7F2 /* SubCategoriesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoriesCell.h; sourceTree = "<group>"; };
 		90BFB9631AEEA82E00FCD7F2 /* SubCategoriesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoriesCell.m; sourceTree = "<group>"; };
 		90BFB9651AEEA98B00FCD7F2 /* SubMainTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubMainTable.h; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 				90DEC8DE1B21AB8500AF4069 /* CategoriesCollectionViewCell.m */,
 				90DDE31D1B231F290099BAEF /* ViewProducts.h */,
 				90DDE31E1B231F290099BAEF /* ViewProducts.m */,
-				90B9B2331AE6BE0200003F6D /* IMG_3502.JPG */,
 				90B41A401AE9678E00D3FBC1 /* Zdjecia */,
 				90583AF41ACD3D710054E1DC /* Supporting Files */,
 			);
@@ -379,7 +376,6 @@
 				90DEA4211B23942800EEA3F0 /* man_icon.svg in Resources */,
 				90DEA41D1B23942800EEA3F0 /* favourites_icon.svg in Resources */,
 				F194D3661B2063A5006066B3 /* buty_man.jpg in Resources */,
-				90B9B2341AE6BE0200003F6D /* IMG_3502.JPG in Resources */,
 				F194D36E1B20642A006066B3 /* sweter_man.jpg in Resources */,
 				90DEC91C1B21D4C500AF4069 /* czolenka.png in Resources */,
 				904F5E8C1B1B24CF00DA4D49 /* Main.storyboard in Resources */,

@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewProducts : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *galleryView;
+@property (weak, nonatomic) IBOutlet UIView *sizeView;
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewProducts;
 @property (strong, nonatomic) NSString *imageRecive;
+- (IBAction)actionSegmentProductsView:(id)sender;
 @property (strong, nonatomic) NSString *titleBar;
 @property (weak, nonatomic) IBOutlet UIView *HidingView;
 - (IBAction)InfoButton:(id)sender;

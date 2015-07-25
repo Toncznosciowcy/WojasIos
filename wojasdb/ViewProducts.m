@@ -17,6 +17,8 @@
 @synthesize imageViewProducts;
 @synthesize HidingView;
 @synthesize titleBar;
+@synthesize colorView, sizeView, galleryView;
+
 - (void)viewDidLoad {
     
     //- LOADING IMAGE //
@@ -74,5 +76,30 @@
     
      HidingView.hidden = NO;
 
+}
+- (IBAction)actionSegmentProductsView:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.sizeView.hidden = YES;
+            self.colorView.hidden = YES;
+            self.galleryView.hidden = NO;
+            break;
+        case 1:
+            self.sizeView.hidden = YES;
+            self.colorView.hidden = NO;
+            self.galleryView.hidden = YES;
+            break;
+        case 2:
+            self.sizeView.hidden = NO;
+            self.colorView.hidden = YES;
+            self.galleryView.hidden = YES;
+            break;
+        default:
+            break;
+    }
+    
+    
+    
+    
 }
 @end

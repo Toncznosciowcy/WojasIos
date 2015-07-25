@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D216D592-E839-4FD1-AD4D-7443B0A2DBA3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>wojasdb</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8771A74D062E72A11B3DC8FCF27C94D405C56835</key>
 		<string>https://github.com/Toncznosciowcy/WojasIos.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>wojasdb.xcodeproj</string>
+	<string>wojasdb.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8771A74D062E72A11B3DC8FCF27C94D405C56835</key>

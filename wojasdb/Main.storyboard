@@ -170,7 +170,7 @@
         <!--View Products-->
         <scene sceneID="YTN-JT-CgS">
             <objects>
-                <viewController id="6eK-Am-LHK" customClass="ViewProducts" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="6eK-Am-LHK" customClass="ViewProducts" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xwd-y8-Kup"/>
                         <viewControllerLayoutGuide type="bottom" id="ec4-9s-O4b"/>
@@ -180,31 +180,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6Y-xY-4OX">
-                                <rect key="frame" x="0.0" y="64" width="414" height="601"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="503"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM4-CX-B3I">
-                                <rect key="frame" x="298" y="257" width="22" height="22"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="InfoButton:" destination="6eK-Am-LHK" eventType="touchUpInside" id="np2-aq-JYL"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-v6-XEt">
-                                <rect key="frame" x="0.0" y="517" width="414" height="148"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kutas!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b26-GG-CWs">
-                                        <rect key="frame" x="183" y="28" width="49" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-1o-w9Q" userLabel="GalleryView">
+                                <rect key="frame" x="83" y="331" width="248" height="74"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-DO-qoZ">
-                                <rect key="frame" x="79" y="257" width="22" height="22"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOx-yo-rzf" userLabel="SizeView">
+                                <rect key="frame" x="43" y="421" width="328" height="74"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-Z4-h9e" userLabel="ColorView">
+                                <rect key="frame" x="0.0" y="613" width="414" height="74"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-Sc-Nvg">
+                                <rect key="frame" x="0.0" y="700" width="408" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title="4"/>
+                                </segments>
+                                <connections>
+                                    <action selector="actionSegmentProductsView:" destination="6eK-Am-LHK" eventType="valueChanged" id="MOa-tT-Q2I"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-DO-qoZ">
+                                <rect key="frame" x="350" y="150" width="22" height="22"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -212,35 +216,43 @@
                                     <action selector="ShowButton:" destination="6eK-Am-LHK" eventType="touchUpInside" id="GU9-cf-nY2"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99f-Tb-PYL">
-                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="SFp-1N-Bnt"/>
-                                    <tabBarItem title="Michal" id="f3E-zN-t5G"/>
-                                    <tabBarItem title="Item" id="eP9-Vg-Jn5"/>
-                                    <tabBarItem systemItem="more" id="0mz-x4-aiX"/>
-                                </items>
-                            </tabBar>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-v6-XEt">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kutas!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b26-GG-CWs">
+                                        <rect key="frame" x="171" y="216" width="49" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM4-CX-B3I">
+                                        <rect key="frame" x="350" y="85" width="22" height="22"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="InfoButton:" destination="6eK-Am-LHK" eventType="touchUpInside" id="np2-aq-JYL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="99f-Tb-PYL" firstAttribute="leading" secondItem="p6h-V8-klS" secondAttribute="leading" id="1DH-V2-GpP"/>
-                            <constraint firstAttribute="centerX" secondItem="99f-Tb-PYL" secondAttribute="centerX" id="DaO-er-gcJ"/>
-                            <constraint firstItem="ec4-9s-O4b" firstAttribute="top" secondItem="99f-Tb-PYL" secondAttribute="bottom" id="cUQ-7f-qNu"/>
-                            <constraint firstAttribute="trailing" secondItem="99f-Tb-PYL" secondAttribute="trailing" id="hLQ-Eq-Gm8"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="HidingView" destination="rcl-v6-XEt" id="Hua-Ta-aji"/>
+                        <outlet property="colorView" destination="V7L-Z4-h9e" id="HvK-4T-SfA"/>
+                        <outlet property="galleryView" destination="UOx-yo-rzf" id="1bB-SD-Rkp"/>
                         <outlet property="imageViewProducts" destination="z6Y-xY-4OX" id="RQL-tO-Xbk"/>
+                        <outlet property="sizeView" destination="UOx-yo-rzf" id="qkI-1c-zlp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Enp-1S-Qwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7126" y="2464"/>
+            <point key="canvasLocation" x="7151" y="2455"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RU2-nf-5JC">
