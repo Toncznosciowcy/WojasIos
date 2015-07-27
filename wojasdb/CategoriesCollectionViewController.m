@@ -180,14 +180,17 @@ static NSString * const reuseIdentifier = @"CVCell";
         
         Products *info = [arrayFetch objectAtIndex:indexPaths.row];
         NSString *sent = [[NSString alloc]init];
+        NSString *sent2 = [[NSString alloc]init];
         sent = info.imageProduct;
         viewProducts.imageRecive = sent;
+        sent2 = info.nameProduct;
+        viewProducts.nameRecive = sent2;
         NSString *titleBarSent = [[NSString alloc]init];
         titleBarSent = info.nameProduct;
         viewProducts.titleBar = titleBarSent;
         
         NSLog(@"Co ja wysylam tutaj?? (%@) to colection", sent);
-        
+        NSLog(@"SPR (%@) to colection", sent2);
         
          }
     

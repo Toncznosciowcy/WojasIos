@@ -7,17 +7,23 @@
 //
 
 #import "ViewProducts.h"
+#import "AppDelegate.h"
+#import "ColorInfo.h"
+#import "Products.h"
 
 @interface ViewProducts ()
 
 @end
 
 @implementation ViewProducts
+@synthesize nameRecive;
 @synthesize imageRecive;
 @synthesize imageViewProducts;
 @synthesize HidingView;
 @synthesize titleBar;
 @synthesize colorView, sizeView, galleryView;
+@synthesize managedObjectContext;
+@synthesize arrayFetch;
 
 - (void)viewDidLoad {
     
@@ -34,6 +40,47 @@
     [HidingView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.5]];
     
     //-//
+    id delegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [delegate managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"ColorInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSPredicate  *predicate = [NSPredicate predicateWithFormat:@"(joinProducts.nameProduct LIKE[c] %@)", nameRecive];
+    [fetchRequest setPredicate:predicate];
+    [fetchRequest setPropertiesToFetch:@[@"colorName"]];
+    arrayFetch = [ managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+
+
+
+    
+    
+    
+    
+    //ColorInfo *info = arrayFetch;
+    //ColorInfo *colorinfo = arrayFetch;
+    ColorInfo *colorinfo = arrayFetch[0];
+    NSString *colorFirst = colorinfo.colorName;
+    NSLog(@"Działa ??? %@",colorFirst);
+    
+    
+   // NSLog(@"Jakie dokladnie kolory mamy (%@) ", colorinfo.colorName);
+   // NSString *michal =[NSString stringWithFormat:@"%@",arrayFetch.colorName];
+    
+    
+    //NSString *michal = [[NSString alloc]init];
+   // michal = [NSString stringWithFormat:@"%@",info.colorName];
+    
+    
+    
+   // NSString *string =[NSString stringWithFormat:@"%@",info];
+   // NSLog(@"Jakie dokladnie kolory mamy (%@) ", michal);
+    
+    
+    
     
     
     

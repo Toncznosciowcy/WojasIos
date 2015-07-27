@@ -16,6 +16,7 @@
 
 #import "ColorInfo.h"
 #import "ContactView.h"
+#import "SizeInfo.h"
 
 
 
@@ -90,6 +91,31 @@
     //colorInfo.joinProducts= products;
     [products addJoinColorProductsObject:colorInfo];
     
+     SizeInfo *sizeInfo =[ NSEntityDescription
+                         insertNewObjectForEntityForName:@"SizeInfo"
+                         inManagedObjectContext:context];
+    sizeInfo.size = [NSNumber numberWithFloat:39];
+    [colorInfo addJoinSizeColorObject:sizeInfo];
+    
+    
+    SizeInfo *sizeInfo1 =[ NSEntityDescription
+                         insertNewObjectForEntityForName:@"SizeInfo"
+                         inManagedObjectContext:context];
+    sizeInfo1.size = [NSNumber numberWithFloat:40];
+    [colorInfo addJoinSizeColorObject:sizeInfo1];
+    
+    SizeInfo *sizeInfo2 =[ NSEntityDescription
+                         insertNewObjectForEntityForName:@"SizeInfo"
+                         inManagedObjectContext:context];
+    sizeInfo2.size = [NSNumber numberWithFloat:41];
+    [colorInfo addJoinSizeColorObject:sizeInfo2];
+    
+    SizeInfo *sizeInfo3 =[ NSEntityDescription
+                         insertNewObjectForEntityForName:@"SizeInfo"
+                         inManagedObjectContext:context];
+    sizeInfo3.size = [NSNumber numberWithFloat:42];
+    [colorInfo addJoinSizeColorObject:sizeInfo3];
+    
     ColorInfo *colorInfo2 = [ NSEntityDescription
                             insertNewObjectForEntityForName:@"ColorInfo"
                             inManagedObjectContext:context];
@@ -97,6 +123,14 @@
     colorInfo2.imageCP = @"  czarneBotki";
     //colorInfo2.joinProducts= products;
     [products addJoinColorProductsObject:colorInfo2];
+    
+    ColorInfo *colorInfo3 = [ NSEntityDescription
+                             insertNewObjectForEntityForName:@"ColorInfo"
+                             inManagedObjectContext:context];
+    colorInfo3.colorName = @"white.jpg";
+    colorInfo3.imageCP = @"  bialeBotki";
+    //colorInfo2.joinProducts= products;
+    [products addJoinColorProductsObject:colorInfo3];
     
     
     Products * products1 =[ NSEntityDescription
@@ -109,13 +143,13 @@
     products1.joinProductSC = subCategoriesin;
     //subCategoriesin.joinP = products;
     
-    ColorInfo *colorInfo3 = [ NSEntityDescription
+    ColorInfo *colorInfo33 = [ NSEntityDescription
                             insertNewObjectForEntityForName:@"ColorInfo"
                             inManagedObjectContext:context];
-    colorInfo3.colorName = @"green.jpg";
-    colorInfo3.imageCP = @" zieloneNike";
+    colorInfo33.colorName = @"green.jpg";
+    colorInfo33.imageCP = @" zieloneNike";
     //colorInfo.joinProducts= products;
-    [products1 addJoinColorProductsObject:colorInfo3];
+    [products1 addJoinColorProductsObject:colorInfo33];
     
     ColorInfo *colorInfo4 = [ NSEntityDescription
                              insertNewObjectForEntityForName:@"ColorInfo"
@@ -328,7 +362,7 @@
     failedBankInfo.imageCat = imageData1;
    // [failedBankInfo setValue:imageData forKey:@"imageCat"];
     */
-    /*
+    
 
     @try{
         
@@ -357,7 +391,7 @@
     if (![context save:&error]) {
           NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
-   */ 
+   
     // Test listing all FailedBankInfos from the store
  /*
   NSEntityDescription *entity = [NSEntityDescription entityForName:@"Categories"

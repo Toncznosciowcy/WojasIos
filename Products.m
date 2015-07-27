@@ -2,7 +2,7 @@
 //  Products.m
 //  wojasdb
 //
-//  Created by Michał Świerczek on 06.06.2015.
+//  Created by Michał Świerczek on 25.07.2015.
 //  Copyright (c) 2015 michał. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 @dynamic imageProduct;
 @dynamic nameProduct;
 @dynamic priceProduct;
-@dynamic joinProductSC;
 @dynamic joinColorProducts;
+@dynamic joinProductSC;
 
 @end

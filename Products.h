@@ -2,7 +2,7 @@
 //  Products.h
 //  wojasdb
 //
-//  Created by Michał Świerczek on 06.06.2015.
+//  Created by Michał Świerczek on 25.07.2015.
 //  Copyright (c) 2015 michał. All rights reserved.
 //
 
@@ -16,8 +16,8 @@
 @property (nonatomic, retain) NSString * imageProduct;
 @property (nonatomic, retain) NSString * nameProduct;
 @property (nonatomic, retain) NSNumber * priceProduct;
-@property (nonatomic, retain) SubCategories *joinProductSC;
 @property (nonatomic, retain) NSSet *joinColorProducts;
+@property (nonatomic, retain) SubCategories *joinProductSC;
 @end
 
 @interface Products (CoreDataGeneratedAccessors)
